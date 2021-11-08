@@ -8,8 +8,8 @@ public class Rectangle {
   }
 
   Rectangle(double width, double height) {
-    this.width = width;
-    this.height = height;
+    this.setWidth(width);
+    this.setHeight(height);
   }
 
   /**
@@ -23,7 +23,11 @@ public class Rectangle {
    * @param width the width to set
    */
   public void setWidth(double width) {
-    this.width = width;
+    if(width <= 0) {
+      this.width = 1.0;
+    } else {
+      this.width = width;
+    }
   }
 
   /**
@@ -37,7 +41,11 @@ public class Rectangle {
    * @param height the height to set
    */
   public void setHeight(double height) {
-    this.height = height;
+    if(height <= 0) {
+      this.height = 1.0;
+    } else {
+      this.height = height;
+    }
   }
 
   /**
